@@ -67,14 +67,14 @@ static const struct arg args[] = {
 	/* function format          argument */
 	{ cpu_perc, "  [%s%]", NULL },
 	{ run_command, " [%s] |", "sensors | grep 'Core' | awk '{print $3}' | sed 's/+//' | sort -n | tail -n 1" },
-	{ run_command, "  [%s]", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ run_command, " [%s] |", "amixer get Mic | grep 'Left' | grep -o off || echo 'on'" },
-	{ netspeed_rx, "  [%sB/s]", "wlp1s0" },
-	{ netspeed_tx, " [%sB/s] |", "wlp1s0" },
-	{ ram_used, "  [%s] |", NULL },
-	{ battery_perc, "  [%s%%]", "BAT1" },
-	{ battery_state, " [%s] |", "BAT1" },
-	{ datetime, "  [%s]",           "%F:%I:%M" },
+	{ netspeed_rx, "  [%sB/s]", "wlp3s0" },
+	{ netspeed_tx, " 祝[%sB/s] |", "wlp3s0" },
+	{ ram_used, "  [%s] |", NULL },
+    { battery_perc, "  [%s%%]", "BAT1" },
+	{ battery_perc, " [%s%%]", "BAT2" },
+	{ battery_state, " [%s]", "BAT1" },
+	{ battery_state, " [%s] |", "BAT2" },
+	{ datetime, "  [%s]",           "%F:%I:%M" }
 };
 //	{ vol_perc, "   [%s%] |",
 

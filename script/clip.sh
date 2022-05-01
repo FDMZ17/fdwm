@@ -1,3 +1,3 @@
 #!/bin/sh
-
-echo "$(xclip -o)" | tr -d '' >> ~/.clip_list
+echo "$(xclip -o)" >> ~/.clip_list
+notify-send "Saved to clipboatd" "$(xclip -o)"
