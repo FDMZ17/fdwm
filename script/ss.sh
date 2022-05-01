@@ -7,7 +7,7 @@ function ss {
 #>
 		captureDate=$(date '+%d-%m-%y-%H:%M:%S')
 		maim --select /tmp/${captureDate}.png
-		url=$(curl -F file=@/tmp/${captureDate}.png https://0x0.st | grep -o 'http[s]*:[^"]*' | tr -d '\n')
+		url=$(curl -F file=@/tmp/${captureDate}.png https://0x0.st)
 		echo $url | xclip -sel c
 		notify-send "Done!" "URL: $url \ncopied to clipboard"
 		echo $url >> $HOME/.ss_list
